@@ -3,7 +3,8 @@ let app = new Vue({
     data: {
         count: 0,
         offset: 0,
-        profiles: []
+        profiles: [],
+        loading: true
     },
     methods: {
         init ({ response }) {
@@ -17,8 +18,10 @@ let app = new Vue({
             }
 
             this.count = response.count;
+            document.title = `(${this.count}) Петиция Nintendo of Russia`;
             this.profiles = this.profiles.concat(profiles);
             this.offset = this.profiles.length;
+            this.loading = false;
         }
     },
     mounted: function () {
