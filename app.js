@@ -31,9 +31,6 @@ new Vue({
         }
     },
     mounted: function () {
-        this.parse()
-        setInterval(() => {
-            this.parse();
-        }, 4000);
+        this.parse();
     }
 })
