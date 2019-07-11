@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/jpeg" href="logo.jpg"/>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="skeleton.css">
+    <style>
+        .border {
+            border-radius: 6px;
+        }
+        .mt-4 {
+            margin-top: 40px;
+        }
+        .mt-2 {
+            margin-top: 20px;
+        }
+    </style>
+    <title>Петиция Nintendo of Russia</title>
+</head>
+<body>
+    <div class="container" id="app">
+        <img src="logo.jpg" alt="logo" class="u-full-width border mt-4">
+        <h3 class="mt-2" style="text-align: center;">Петиция Nintendo of Russia</h3>
+        <h1 style="text-align: center;">{{count}}</h1>
+        <small><a href="https://vk.com/nintendosign" target="_blank">Как попасть в этот список?</a></small>
+        <table class="u-full-width">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Пользователь</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(user, idx) of profiles">
+                    <td>#{{idx}}</td>
+                    <td>{{user.first_name}} {{user.last_name}}</td>
+                    <td><img :src="user.photo" alt="" class="border" width="40"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
