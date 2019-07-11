@@ -24,7 +24,7 @@
     <div class="container" id="app">
         <img src="logo.jpg" alt="logo" class="u-full-width border mt-4">
         <h3 class="mt-2" style="text-align: center;">Петиция Nintendo of Russia</h3>
-        <h1 style="text-align: center;">{{count}}</h1>
+        <h1 style="text-align: center;">Количество уникальных пользователей {{count}}</h1>
         <small><a href="https://vk.com/nintendosign" target="_blank">Как попасть в этот список?</a></small>
         <table class="u-full-width">
             <thead>
@@ -38,7 +38,7 @@
                 <tr v-for="(user, idx) of profiles">
                     <td>#{{idx}}</td>
                     <td>{{user.first_name}} {{user.last_name}}</td>
-                    <td><img :src="user.photo" alt="" class="border" width="40"></td>
+                    <td><img :src="user.photo_100" alt="" class="border" width="40"></td>
                 </tr>
             </tbody>
         </table>
