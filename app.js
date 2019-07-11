@@ -23,7 +23,7 @@ let app = new Vue({
     },
     mounted: function () {
         setInterval(() => {
-            getComments(`https://api.vk.com/method/wall.getComments?owner_id=-184333261&post_id=2&v=5.52&access_token=c6b36f9cc6b36f9cc6b36f9c18c6d8f3c3cc6b3c6b36f9c9b95b850f5f9982b388a7c71&extended=1&count=100&offset=${this.offset}`, 'app.init');
+            getComments(`https://api.vk.com/method/wall.getComments?owner_id=-184333261&post_id=2&v=5.52&access_token=c6b36f9cc6b36f9cc6b36f9c18c6d8f3c3cc6b3c6b36f9c9b95b850f5f9982b388a7c71&extended=1&count=100&sort=asc&offset=${this.offset}`, 'app.init');
         }, 1000);
     }
 })
