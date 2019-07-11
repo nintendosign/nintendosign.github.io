@@ -9,7 +9,7 @@ new Vue({
         get () {
             return new Promise(async (resolve, reject) => {
                 try {
-                    const { data } = await axios.get(`https://api.vk.com/method/wall.getComments?owner_id=-184333261&post_id=2&v=5.52&access_token=c6b36f9cc6b36f9cc6b36f9c18c6d8f3c3cc6b3c6b36f9c9b95b850f5f9982b388a7c71&extended=1&count=100&offset=${this.offset}`);
+                    const { data } = await axios.get(`https://crossorigin.me/https://api.vk.com/method/wall.getComments?owner_id=-184333261&post_id=2&v=5.52&access_token=c6b36f9cc6b36f9cc6b36f9c18c6d8f3c3cc6b3c6b36f9c9b95b850f5f9982b388a7c71&extended=1&count=100&offset=${this.offset}`);
                     resolve({ count: data.response.count, users: data.response.profiles });
                 } catch (error) {
                     reject(error);
