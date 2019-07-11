@@ -7,8 +7,17 @@ let app = new Vue({
     },
     methods: {
         init ({ response }) {
+            let profiles = [];
+            for (const profile of response.profiles) {
+                if (profile.first_name != 'Администрация ВКонтакте') {
+                    profiles.push(profile);
+                } else {
+                    response.count = response.count--;
+                }
+            }
+
             this.count = response.count;
-            this.profiles = this.profiles.concat(response.profiles);
+            this.profiles = this.profiles.concat(profiles);
             this.offset = this.profiles.length;
         }
     },
