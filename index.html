@@ -7,29 +7,20 @@
     <link rel="shortcut icon" type="image/jpeg" href="logo.jpg"/>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="skeleton.css">
-    <style>
-        .border {
-            border-radius: 6px;
-        }
-        .mt-4 {
-            margin-top: 40px;
-        }
-        .mt-2 {
-            margin-top: 20px;
-        }
-        .loading {
-            position: fixed;
-            top: 50%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <title>Петиция Nintendo of Russia</title>
 </head>
 <body>
     <div class="container" id="app">
-        <div v-if="!loading">
-            <img src="logo.jpg" alt="logo" class="u-full-width border mt-4">
-            <h3 class="mt-2" style="text-align: center;">Петиция Nintendo of Russia</h3>
-            <h1 style="text-align: center;">{{count}}</h1>
+        <div v-if="!loading" class="card mt-4 border">
+            <div class="row mb-2">  
+                <div class="six columns"><img src="logo.jpg" alt="logo" class="u-full-width border"></div>
+                <div class="six columns">
+                        <h3 class="mt-2" style="text-align: center;">Количество подписей</h3>
+                        <h1 style="text-align: center;">{{count}}</h1>
+                </div>
+            </div>
+            <p class="text">{{text}}</p>
             <small><a href="https://vk.com/nintendosign" target="_blank">Как попасть в этот список?</a></small>
             <table class="u-full-width">
                 <thead>
@@ -46,7 +37,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="loading" v-else><h3>Загрузка петиции...</h3></div>
+        <div class="loading" v-else></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
