@@ -26,3 +26,17 @@
     white-space: pre-line;
     word-wrap: break-word;
 }
+.coop {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: gray;
+}
+
+.coop a {
+    color: gray;
+    text-decoration: none;
+}
+.coop a:hover {
+    text-decoration: underline;
+}
