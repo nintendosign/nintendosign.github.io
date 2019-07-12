@@ -13,6 +13,9 @@
 .mb-4 {
     margin-bottom: 40px;
 }
+.mb-1 {
+    margin-bottom: 10px;
+}
 .loading {
     position: fixed;
     top: 50%;
@@ -27,10 +30,8 @@
     word-wrap: break-word;
 }
 .coop {
-    position: absolute;
-    top: 12px;
-    right: 12px;
     color: gray;
+    float: right;
 }
 
 .coop a {

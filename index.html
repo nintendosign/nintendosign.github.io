@@ -13,6 +13,7 @@
 <body>
     <div class="container" id="app">
         <div v-if="!loading" class="card mt-4 mb-2 border">
+            <small class="coop mb-1">by <a href="https://vk.com/mikhaltsov98" target="_blank">bqio</a></small>
             <div class="row mb-2">  
                 <div class="six columns"><img src="logo.jpg" alt="logo" class="u-full-width border"></div>
                 <div class="six columns">
@@ -36,7 +37,6 @@
                     </tr>
                 </tbody>
             </table>
-            <small class="coop">by <a href="https://vk.com/mikhaltsov98" target="_blank">bqio</a></small>
         </div>
         <div class="loading" v-else></div>
     </div>
