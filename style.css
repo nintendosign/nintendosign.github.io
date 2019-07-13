@@ -41,3 +41,9 @@
 .coop a:hover {
     text-decoration: underline;
 }
+body {
+    background-color: #f1f1f1;
+}
+.container {
+    background-color: white;
+}

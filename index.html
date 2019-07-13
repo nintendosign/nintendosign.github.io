@@ -21,7 +21,7 @@
                         <h1 style="text-align: center;">{{count}}</h1>
                 </div>
             </div>
-            <p class="text">{{text}}</p>
+            <div id="vk_groups" class="mb-2"></div>
             <small><a href="https://vk.com/nintendosign" target="_blank">Как попасть в этот список?</a></small>
             <table class="u-full-width">
                 <thead>
@@ -41,7 +41,10 @@
         <div class="loading" v-else></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://vk.com/js/api/openapi.js?161"></script>
     <script src="app.js"></script>
+    <script type="text/javascript">
+        VK.Widgets.Group("vk_groups", { mode: 4, wide: 1, width: 'auto', height: '800' }, 184333261);
+    </script>
 </body>
 </html>
